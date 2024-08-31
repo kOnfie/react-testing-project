@@ -9,12 +9,10 @@ interface SelectProps {
 
 const Select: FC<SelectProps> = ({ title, options }) => {
   return (
-    <>
-      <p className={s.title}>{title}</p>
-      <select className={s.select}>
-        {options && options.map((option) => <option key={option}>{option}</option>)}
-      </select>
-    </>
+    <div className={s.select}>
+      <p>{title}</p>
+      <select>{options && options.map((option) => <option key={option}>{option}</option>)}</select>
+    </div>
   );
 };
 
